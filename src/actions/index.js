@@ -1,5 +1,4 @@
-export const ADD_ARTICLE = 'ADD_ARTICLE'
-export const DELETE_ARTICLE = 'DELETE_ARTICLE'
+import { ADD_ARTICLE, DELETE_ARTICLE } from '../constants/ActionTypes'
 
 export const addArticle = article => ({
     type: ADD_ARTICLE,

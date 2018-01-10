@@ -1,4 +1,4 @@
-import { ADD_ARTICLE, DELETE_ARTICLE } from '../actions'
+import { ADD_ARTICLE, DELETE_ARTICLE } from '../constants/ActionTypes'
 
 const initialState = {
     articles: []

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { deleteArticle } from '../actions'
+import ListItem from '../components/ListItem'
 import styled from 'styled-components'
 
 const mapStateToProps = state => {
@@ -20,12 +21,6 @@ const Wrapper = styled.div `
     margin-top: 1.5rem;
 `
 
-const Item = styled.p`
-    color: cadetblue;
-    font-size: 2rem;
-    margin: 1rem 0rem;
-    cursor: not-allowed;
-`
 class ArticleList extends Component {
 
     constructor(props) {
@@ -36,7 +31,6 @@ class ArticleList extends Component {
     }
 
     handleDelete(id) {
-        console.log(id)
         this.props.deleteArticle(id)
     }
 
@@ -44,9 +38,7 @@ class ArticleList extends Component {
         return (
             <Wrapper>
                 {this.props.articles.map( (n, i) => (
-                    <Item key={ n.id } onClick={ () => this.handleDelete(n.id) }>
-                        { i+1 }. { n.title }
-                    </Item>
+                    <ListItem key={ n.id } deleteArticle={ () => this.handleDelete(n.id) } index={ i } title={ n.title } />
                 ))}
             </Wrapper>
         )
