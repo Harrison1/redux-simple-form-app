@@ -60,7 +60,8 @@ class InputForm extends Component {
     handleSubmit(e) {
         e.preventDefault()
         const { title } = this.state
-        this.props.addArticle({ title })
+        const id = Math.floor(Math.random() * 10000) + 1  
+        this.props.addArticle({ title, id })
         this.setState({ title: "" })
     }
 
