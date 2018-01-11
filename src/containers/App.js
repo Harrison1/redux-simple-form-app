@@ -3,6 +3,7 @@ import '../App.css';
 import styled from 'styled-components'
 import List from './List'
 import Form from './Form'
+import FetchList from './FetchList'
 
 const Wrapper = styled.div`
   margin: auto;
@@ -16,6 +17,7 @@ const App = () =>
     <h2>Articles</h2>
     <Form />
     <List />
+    <FetchList />
   </Wrapper>
 
 export default App;

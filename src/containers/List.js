@@ -37,7 +37,7 @@ class ArticleList extends Component {
     render() {
         return (
             <Wrapper>
-                {this.props.articles.map( (n, i) => (
+                {this.props.articles.articles.map( (n, i) => (
                     <ListItem key={ n.id } deleteArticle={ () => this.handleDelete(n.id) } index={ i } title={ n.title } />
                 ))}
             </Wrapper>
